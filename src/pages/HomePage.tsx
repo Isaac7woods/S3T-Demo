@@ -5,10 +5,28 @@ import { Dumbbell, Activity, Apple, MonitorPlay, Mail, Phone, MapPin, Instagram,
 function HomePage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
+
+    try {
+      const response = await fetch('https://hook.us2.make.com/34veotthvb7t9btmdw9syke7jah4et2y', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('An error occurred. Please try again.');
+    }
   };
 
   return (
