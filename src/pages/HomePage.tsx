@@ -9,7 +9,7 @@ function HomePage() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://hook.us2.make.com/34veotthvb7t9btmdw9syke7jah4et2y', {
+      const response = await fetch('https://hook.us2.make.com/2cawyvyl5z2ojxc4bpdsnsr7ukqc2wqs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
