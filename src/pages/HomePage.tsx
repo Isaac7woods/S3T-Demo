@@ -360,15 +360,6 @@ function HomePage() {
           </div>
         </div>
       </footer>
-
-      {/* Image Below Footer */}
-      <div className="w-full bg-zinc-950">
-        <img
-          src="https://raw.githubusercontent.com/Isaac7woods/S3T-Demo/main/AI%20Images.png"
-          alt="AI Generated Images"
-          className="w-full h-auto"
-        />
-      </div>
     </div>
   );
 }
