@@ -132,7 +132,7 @@ function HomePage() {
               <div className="absolute -inset-1 bg-gradient-to-r from-zinc-600 to-zinc-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
               <div className="relative rounded-2xl overflow-hidden border border-zinc-600/50">
                 <img
-                  src="/image copy copy.png"
+                  src="/image copy copy copy.png"
                   alt="Jason - Personal Trainer"
                   className="w-full h-auto object-cover"
                 />
