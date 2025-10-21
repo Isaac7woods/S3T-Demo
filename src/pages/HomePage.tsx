@@ -9,7 +9,7 @@ function HomePage() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://hook.us2.make.com/19lk51465yn3immpwahhb72582lhu21j', {
+      const response = await fetch('https://isaac7woods.app.n8n.cloud/webhook-test/8bdcbb42-cc00-489e-b3c7-9a8afef39dd3', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

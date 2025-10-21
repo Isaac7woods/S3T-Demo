@@ -17,9 +17,20 @@ function NutritionCoachingPage() {
     setSubmitMessage('');
 
     try {
-      console.log('Form submitted:', formData);
-      setSubmitMessage('Thank you! We will contact you soon.');
-      setFormData({ name: '', phone: '', email: '', description: '' });
+      const response = await fetch('https://isaac7woods.app.n8n.cloud/webhook-test/8bdcbb42-cc00-489e-b3c7-9a8afef39dd3', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitMessage('Thank you! We will contact you soon.');
+        setFormData({ name: '', phone: '', email: '', description: '' });
+      } else {
+        setSubmitMessage('Failed to send message. Please try again.');
+      }
     } catch (error) {
       setSubmitMessage('Something went wrong. Please try again.');
     } finally {
